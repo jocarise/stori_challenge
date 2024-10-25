@@ -1,6 +1,10 @@
 # Stori Challenge
 
-A brief description of the project, highlighting its purpose and what problem it solves.
+This Email Newsletter Service allows users to easily send newsletters to their subscribers.
+
+Key Features:
+Create Newsletters: Design and customize newsletters with ease.
+Send Emails: Quickly send newsletters to your subscribers.
 
 ## Table of Contents
 
@@ -31,14 +35,14 @@ Before proceeding with the installation, you need to configure the environment v
 
 
 	For details on where to obtain these environment variables or their functions, refer to:
-	* ./challenge/arquitecture/envs.md
+	* ./challenge/doc/envs.md
 
 4. Run docker services:
  ``docker compose build && docker compose up -d``
 
 5. Go to http://localhost:3000 in you browser
 
-Be aware of the ports that are being foward from the docker containes
+	Be aware of the ports that are being forwarded from the docker containers: 
 	- PORT = 3000 // Client
 	* PORT = 4000 // User Service
 	+ PORT = 4500 // Newsletter Service
@@ -50,7 +54,7 @@ Be aware of the ports that are being foward from the docker containes
 
 ## Architecture
 
-## Client UI
+### Client UI
 ![image](https://github.com/user-attachments/assets/03841029-0955-47f2-b6ee-dc5bf64ec0cf)
 
 ### Initial Approach
