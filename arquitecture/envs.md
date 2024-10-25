@@ -1,0 +1,30 @@
+
+
+# user-service
+# ./
+POSTGRES_USERVICE_USER=${USER}
+POSTGRES_USERVICE_PASSWORD=${PASSWORD}
+POSTGRES_USERVICE_DB=${DB}
+# ./user-service
+API_VERSION=/v1
+PORT=:4000
+DATABASE_URL=postgres://{USER}:{PASSWORD}@user_service_db:{PORT}/{DB}
+JWT_SECRET=${JWT_SECRET}
+
+swag init
+# newsletter-service
+# ./
+export POSTGRES_NERVICE_USER=${USER}
+export POSTGRES_NSERVICE_PASSWORD=${PASSWORD}
+export POSTGRES_NSERVICE_DB=${DB}
+# ./user-service
+API_VERSION=/v1
+PORT=:4500
+DATABASE_URL=postgres://{USER}:{PASSWORD}@newsletter_service_db:{PORT}/{DB}
+JWT_SECRET=JWT_SECRET
+FILES_PATH=/app/uploads
+BASE_URL=http://localhost:4500
+GMAIL_EMAIL=KEY
+GMAIL_KEY=KEYS
+GMAIL_HOST=KEY
+GMAIL_PORT=KEY
