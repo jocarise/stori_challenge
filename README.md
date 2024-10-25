@@ -69,10 +69,10 @@ Before proceeding with the installation, you need to configure the environment v
 	GMAIL_PORT=587
 	```
 	If you need to test the smpt email please contact with me through email `jorgeocarisaa@gmail.dom` and I can give you the keys that I used to test.
-	If you run the project without `GMAIL_APP_KEY`  and `GMAIL_USER` the emails won't sended.
+	If you run the project without `GMAIL_APP_KEY` and `GMAIL_USER` the emails won't sended.
 
 	For details on where to obtain these environment variables or their behavior, refer to:
-	* ./challenge/doc/envs.md
+	* ./doc/envs.txt
 
 4. Run docker services:
  ``docker compose build && docker compose up -d``
