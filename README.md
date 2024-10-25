@@ -25,7 +25,7 @@ Before running the project, ensure you have the following installed on your mach
 Before proceeding with the installation, you need to configure the environment variables.
 
 1. Clone the repo:
-   ``git clone https://github.com/jocaris/stori_challenge.git``
+   ``git clone https://github.com/jocarise/stori_challenge.git``
 
 2.  Set up the environment variables in the following files:
 	1. Create a new .env file inside the root folder and copy .env.example into .env:
