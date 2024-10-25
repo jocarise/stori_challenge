@@ -26,9 +26,8 @@ Before proceeding with the installation, you need to configure the environment v
 
 1. Clone the repo:
    ``git clone https://github.com/jocarise/stori_challenge.git``
-
-2.  Set up the environment variables in the following files:
-	1. Create a new .env file inside the root folder and copy .env.example into .env:
+2. Configure Env variables:
+	Create a new .env file inside the root folder and copy .env.example into .env:
 	```ruby
 	# user-service
 	POSTGRES_USERVICE_USER=admin
@@ -40,14 +39,14 @@ Before proceeding with the installation, you need to configure the environment v
 	POSTGRES_NSERVICE_DB=newsletters_db
 	```
 
- 	2.Create a new .env file inside the root/client folder and copy .env.example into .env:
+   	Create a new .env file inside the root/client folder and copy .env.example into .env:
 	```ruby
 	USER_SERVICE_API=http://localhost:4000
 	NEWSLETTER_SERVICE_API=http://localhost:4500
 	NEWSLETTER_DOCKER_SERVICE_API=http://newsletter_service:4500
 	```
 
-   	3.Create a new .env file inside the root/user-service folder and copy .env.example into .env:
+   	Create a new .env file inside the root/user-service folder and copy .env.example into .env:
 	```ruby
 	API_VERSION=/v1
 	PORT=:4000
@@ -55,7 +54,7 @@ Before proceeding with the installation, you need to configure the environment v
 	JWT_SECRET=cab2e30b56e8618d6515370efa8acb934f70041ff05b72527ffb2142aefe088a
 	```
 
-	4.Create a new .env file inside the root/user-service folder and copy .env.example into .env:
+   	Create a new .env file inside the root/user-service folder and copy .env.example into .env:
 	```ruby
 	API_VERSION=/v1
 	PORT=:4500
@@ -86,7 +85,7 @@ Before proceeding with the installation, you need to configure the environment v
 	- PORT = 5432 // User Service DB
 	* PORT = 5433 // Newsletter Service DB
 
-6. To stop the containers run:
+6. To stop the containers:
  ``docker compose down``
 
 ## Architecture
