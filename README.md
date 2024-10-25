@@ -28,13 +28,50 @@ Before proceeding with the installation, you need to configure the environment v
    ``git clone https://github.com/jocaris/stori_challenge.git``
 
 2.  Set up the environment variables in the following files:
-   	- ./challenge/newsletter-service/.env.example
-	* ./challenge/user-service/.env.example
-	+ ./challenge/client/.env.example
-	- ./challenge/.env.example
+	1. Create a new .env file inside the root folder and copy .env.example into .env:
+	```ruby
+	# user-service
+	POSTGRES_USERVICE_USER=admin
+	POSTGRES_USERVICE_PASSWORD=root
+	POSTGRES_USERVICE_DB=users_db
+	# newsletter-service
+	POSTGRES_NSERVICE_USER=admin
+	POSTGRES_NSERVICE_PASSWORD=root
+	POSTGRES_NSERVICE_DB=newsletters_db
+	```
 
+ 	2.Create a new .env file inside the root/client folder and copy .env.example into .env:
+	```ruby
+	USER_SERVICE_API=http://localhost:4000
+	NEWSLETTER_SERVICE_API=http://localhost:4500
+	NEWSLETTER_DOCKER_SERVICE_API=http://newsletter_service:4500
+	```
 
-	For details on where to obtain these environment variables or their functions, refer to:
+   	3.Create a new .env file inside the root/user-service folder and copy .env.example into .env:
+	```ruby
+	API_VERSION=/v1
+	PORT=:4000
+	DATABASE_URL=postgres://admin:root@user_service_db:5432/users_db
+	JWT_SECRET=cab2e30b56e8618d6515370efa8acb934f70041ff05b72527ffb2142aefe088a
+	```
+
+	4.Create a new .env file inside the root/user-service folder and copy .env.example into .env:
+	```ruby
+	API_VERSION=/v1
+	PORT=:4500
+	DATABASE_URL=postgres://admin:root@newsletter_service_db:5432/newsletters_db
+	JWT_SECRET=cab2e30b56e8618d6515370efa8acb934f70041ff05b72527ffb2142aefe088a
+	FILES_PATH=/app/uploads
+	BASE_URL=http://localhost:4500
+	GMAIL_EMAIL=GMAIL_USER
+	GMAIL_KEY=GMAIL_APP_KEY
+	GMAIL_HOST=smtp.gmail.com
+	GMAIL_PORT=587
+	```
+	If you need to test the smpt email please contact with me through email `jorgeocarisaa@gmail.dom` and I can give you the keys that I used to test.
+	If you run the project without `GMAIL_APP_KEY`  and `GMAIL_USER` the emails won't sended.
+
+	For details on where to obtain these environment variables or their behavior, refer to:
 	* ./challenge/doc/envs.md
 
 4. Run docker services:
